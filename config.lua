@@ -3,14 +3,14 @@
 worldType = "pvp"
 hotkeyAimbotEnabled = true
 protectionLevel = 8
-killsToRedSkull = 6
-killsToBlackSkull = 10
+killsToRedSkull = 12
+killsToBlackSkull = 20
 pzLocked = 60 * 1000
 removeChargesFromRunes = true
 timeToDecreaseFrags = 24 * 60 * 60 * 1000
-whiteSkullTime = 15 * 60 * 1000
+whiteSkullTime = 10 * 60 * 1000
 stairJumpExhaustion = 2 * 1000
-experienceByKillingPlayers = false
+experienceByKillingPlayers = true
 expFromPlayersLevelRange = 75
 
 -- Connection Config
@@ -21,10 +21,10 @@ loginProtocolPort = 7171
 gameProtocolPort = 7172
 statusProtocolPort = 7171
 maxPlayers = 2000
-motd = "Welcome To Tibia-Global! OpenServer - Prey System + Imbuiment System and More..."
+motd = "Welcome To Slayer-Server! OpenServer - Prey System + Imbuiment System and More..."
 onePlayerOnlinePerAccount = true
 allowClones = false
-serverName = "Tibia-Global"
+serverName = "Slayer-Server"
 statusTimeout = 5 * 1000
 replaceKickOnLogin = true
 maxPacketsPerSecond = 50
@@ -71,9 +71,9 @@ maxMarketOffersAtATimePerPlayer = 100
 
 -- MySQL
 mysqlHost = "127.0.0.1"
-mysqlUser = "root"
-mysqlPass = "123456"
-mysqlDatabase = "servidor"
+mysqlUser = "otservadmin"
+mysqlPass = "otserv1993"
+mysqlDatabase = "slayer_db"
 mysqlPort = 3306
 passwordType = "sha1"
 mysqlSock = ""
@@ -113,7 +113,7 @@ defaultPriority = "high"
 startupDatabaseOptimization = true
 
 -- Status server information
-ownerName = "Qwizer"
-ownerEmail = "onjogos.rs@gmail.com"
+ownerName = "SCesar"
+ownerEmail = "sceesar93@gmail.com"
 url = "http://www."
-location = "Brasil"
+location = "Brazil"

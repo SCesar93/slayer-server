@@ -1,9 +1,5 @@
-# Real Map-10x
+# Slayer-server-10x
 Servidor mapa global completo com halls of hope, wrap, store ingame, prey system, imbuing system.
-
-# Contatos e Suporte Geral
-TibiaKing, Xtibia e Otland (FORUMS RECOMENDADOS).<br>
-<b>Skype:</b> onjogos <b>Whatsapp:</b> +55 (66) 9 8427-4493 <b>Discord:</b> Qwizer
 
 # Sistemas Recomendados
 Ubuntu 14.04 LTS e Windows 7+
@@ -24,6 +20,17 @@ Website 100% compativel com imagens da Store <a href="https://github.com/Qwizer/
 
 # Utilidades
 IpChanger Versões 7.x - 10.x: <a href="https://static.otland.net/ipchanger.exe">Clique aqui</a>
+
+# Generate tfs in ubuntu
+Install dependencies
+$ sudo apt-get install git cmake build-essential liblua5.2-dev libgmp3-dev libmysqlclient-dev libboost-system-dev libboost-iostreams-dev libpugixml-dev
+Enter in main dir and run
+$ mkdir build && cd build
+$ cmake ../source
+$ make
+
+# Extract map
+Need enter in folder /data/world and extract the ot serv map
 
 # GOD Account
 senha: 2/god

@@ -1,30 +1,4 @@
--- phpMyAdmin SQL Dump
--- version 4.6.6
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1:3306
--- Generation Time: 04-Ago-2017 às 01:13
--- Versão do servidor: 5.6.35
--- PHP Version: 7.1.1
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Database: `servidor`
---
-
--- --------------------------------------------------------
-
---
 -- Estrutura da tabela `accounts`
---
 
 CREATE TABLE `accounts` (
   `id` int(11) NOT NULL,
@@ -57,7 +31,7 @@ CREATE TABLE `accounts` (
   `passed` int(11) NOT NULL DEFAULT '0',
   `block` int(11) NOT NULL DEFAULT '0',
   `refresh` int(11) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 --
 -- Extraindo dados da tabela `accounts`
@@ -79,7 +53,7 @@ CREATE TABLE `account_bans` (
   `banned_at` bigint(20) NOT NULL,
   `expires_at` bigint(20) NOT NULL,
   `banned_by` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -94,7 +68,7 @@ CREATE TABLE `account_ban_history` (
   `banned_at` bigint(20) NOT NULL,
   `expired_at` bigint(20) NOT NULL,
   `banned_by` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -108,7 +82,7 @@ CREATE TABLE `account_viplist` (
   `description` varchar(128) NOT NULL DEFAULT '',
   `icon` tinyint(2) UNSIGNED NOT NULL DEFAULT '0',
   `notify` tinyint(1) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -122,7 +96,7 @@ CREATE TABLE `announcements` (
   `text` varchar(255) NOT NULL,
   `date` varchar(20) NOT NULL,
   `author` varchar(50) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -133,7 +107,7 @@ CREATE TABLE `announcements` (
 CREATE TABLE `global_storage` (
   `key` varchar(32) NOT NULL,
   `value` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -153,7 +127,7 @@ CREATE TABLE `guilds` (
   `balance` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
   `last_execute_points` int(11) NOT NULL DEFAULT '0',
   `logo_gfx_name` varchar(255) NOT NULL DEFAULT ''
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 --
 -- Acionadores `guilds`
@@ -181,7 +155,7 @@ CREATE TABLE `guildwar_kills` (
   `targetguild` int(11) NOT NULL DEFAULT '0',
   `warid` int(11) NOT NULL DEFAULT '0',
   `time` bigint(15) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -192,7 +166,7 @@ CREATE TABLE `guildwar_kills` (
 CREATE TABLE `guild_invites` (
   `player_id` int(11) NOT NULL DEFAULT '0',
   `guild_id` int(11) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -205,7 +179,7 @@ CREATE TABLE `guild_membership` (
   `guild_id` int(11) NOT NULL,
   `rank_id` int(11) NOT NULL,
   `nick` varchar(15) NOT NULL DEFAULT ''
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -218,7 +192,7 @@ CREATE TABLE `guild_ranks` (
   `guild_id` int(11) NOT NULL COMMENT 'guild',
   `name` varchar(255) NOT NULL COMMENT 'rank name',
   `level` int(11) NOT NULL COMMENT 'rank level - leader, vice, member, maybe something else'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -235,7 +209,7 @@ CREATE TABLE `guild_wars` (
   `status` tinyint(2) NOT NULL DEFAULT '0',
   `started` bigint(15) NOT NULL DEFAULT '0',
   `ended` bigint(15) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -257,7 +231,7 @@ CREATE TABLE `houses` (
   `highest_bidder` int(11) NOT NULL DEFAULT '0',
   `size` int(11) NOT NULL DEFAULT '0',
   `beds` int(11) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 --
 -- Extraindo dados da tabela `houses`
@@ -1315,7 +1289,7 @@ CREATE TABLE `house_lists` (
   `house_id` int(11) NOT NULL,
   `listid` int(11) NOT NULL,
   `list` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -1329,7 +1303,7 @@ CREATE TABLE `ip_bans` (
   `banned_at` bigint(20) NOT NULL,
   `expires_at` bigint(20) NOT NULL,
   `banned_by` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -1343,7 +1317,7 @@ CREATE TABLE `live_casts` (
   `password` tinyint(1) NOT NULL DEFAULT '0',
   `description` varchar(255) DEFAULT NULL,
   `spectators` smallint(5) DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -1361,7 +1335,7 @@ CREATE TABLE `market_history` (
   `expires_at` bigint(20) UNSIGNED NOT NULL,
   `inserted` bigint(20) UNSIGNED NOT NULL,
   `state` tinyint(1) UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -1378,7 +1352,7 @@ CREATE TABLE `market_offers` (
   `created` bigint(20) UNSIGNED NOT NULL,
   `anonymous` tinyint(1) NOT NULL DEFAULT '0',
   `price` int(10) UNSIGNED NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -1390,7 +1364,7 @@ CREATE TABLE `newsticker` (
   `id` int(11) UNSIGNED NOT NULL,
   `date` int(11) NOT NULL,
   `text` text NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -1422,7 +1396,7 @@ CREATE TABLE `pagsegurotransacoes` (
   `Data` datetime NOT NULL,
   `ProdQuantidade_x` int(5) NOT NULL,
   `status` tinyint(1) UNSIGNED NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -1437,7 +1411,7 @@ CREATE TABLE `pagseguro_transactions` (
   `status` varchar(50) NOT NULL,
   `item_count` int(11) NOT NULL,
   `data` datetime NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -1536,7 +1510,7 @@ CREATE TABLE `players` (
   `hide_skills` int(11) DEFAULT NULL,
   `hide_set` int(11) DEFAULT NULL,
   `former` varchar(255) NOT NULL DEFAULT '-'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 --
 -- Extraindo dados da tabela `players`
@@ -1554,7 +1528,7 @@ INSERT INTO `players` (`id`, `name`, `group_id`, `account_id`, `level`, `vocatio
 
 CREATE TABLE `players_online` (
   `player_id` int(11) NOT NULL
-) ENGINE=MEMORY DEFAULT CHARSET=latin1;
+) ENGINE=MEMORY;
 
 -- --------------------------------------------------------
 
@@ -1572,7 +1546,7 @@ CREATE TABLE `player_deaths` (
   `mostdamage_is_player` tinyint(1) NOT NULL DEFAULT '0',
   `unjustified` tinyint(1) NOT NULL DEFAULT '0',
   `mostdamage_unjustified` tinyint(1) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -1587,7 +1561,7 @@ CREATE TABLE `player_depotitems` (
   `itemtype` smallint(6) NOT NULL,
   `count` smallint(5) NOT NULL DEFAULT '0',
   `attributes` blob NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -1602,7 +1576,7 @@ CREATE TABLE `player_inboxitems` (
   `itemtype` smallint(6) NOT NULL,
   `count` smallint(5) NOT NULL DEFAULT '0',
   `attributes` blob NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -1617,7 +1591,7 @@ CREATE TABLE `player_items` (
   `itemtype` smallint(6) NOT NULL DEFAULT '0',
   `count` smallint(5) NOT NULL DEFAULT '0',
   `attributes` blob NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -1628,7 +1602,7 @@ CREATE TABLE `player_items` (
 CREATE TABLE `player_misc` (
   `player_id` int(11) NOT NULL,
   `info` blob NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -1641,7 +1615,7 @@ CREATE TABLE `player_namelocks` (
   `reason` varchar(255) NOT NULL,
   `namelocked_at` bigint(20) NOT NULL,
   `namelocked_by` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -1654,7 +1628,7 @@ CREATE TABLE `player_prey` (
   `name` varchar(50) NOT NULL,
   `mindex` smallint(6) NOT NULL,
   `mcolumn` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -1673,7 +1647,7 @@ CREATE TABLE `player_preytimes` (
   `bonus_type3` int(11) NOT NULL,
   `bonus_value3` int(11) NOT NULL,
   `bonus_name3` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -1689,7 +1663,7 @@ CREATE TABLE `player_reports` (
   `posz` int(6) NOT NULL,
   `report_description` text NOT NULL,
   `date` text NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -1704,7 +1678,7 @@ CREATE TABLE `player_rewards` (
   `itemtype` smallint(6) NOT NULL,
   `count` smallint(5) NOT NULL DEFAULT '0',
   `attributes` blob NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -1715,7 +1689,7 @@ CREATE TABLE `player_rewards` (
 CREATE TABLE `player_spells` (
   `player_id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -1727,7 +1701,7 @@ CREATE TABLE `player_storage` (
   `player_id` int(11) NOT NULL DEFAULT '0',
   `key` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `value` int(11) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -1742,7 +1716,7 @@ CREATE TABLE `sellchar` (
   `price` int(11) NOT NULL,
   `status` varchar(40) NOT NULL,
   `oldid` varchar(40) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -1753,7 +1727,7 @@ CREATE TABLE `sellchar` (
 CREATE TABLE `server_config` (
   `config` varchar(50) NOT NULL,
   `value` varchar(256) NOT NULL DEFAULT ''
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -1770,7 +1744,7 @@ CREATE TABLE `store_history` (
   `timestamp` int(11) NOT NULL,
   `id` int(11) NOT NULL,
   `coins` int(11) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -1790,7 +1764,7 @@ CREATE TABLE `tickets` (
   `ticket_status` int(11) NOT NULL,
   `ticket_category` varchar(255) NOT NULL,
   `ticket_description` varchar(255) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -1806,7 +1780,7 @@ CREATE TABLE `tickets_reply` (
   `ticket_last_reply` varchar(255) NOT NULL,
   `ticket_admin_reply` varchar(255) NOT NULL,
   `reply_date` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -1817,7 +1791,7 @@ CREATE TABLE `tickets_reply` (
 CREATE TABLE `tile_store` (
   `house_id` int(11) NOT NULL,
   `data` longblob NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -1832,7 +1806,7 @@ CREATE TABLE `videos` (
   `categoria` int(11) NOT NULL,
   `link` varchar(11) NOT NULL,
   `ativo` int(1) NOT NULL DEFAULT '1'
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -1843,7 +1817,7 @@ CREATE TABLE `videos` (
 CREATE TABLE `videos_categorias` (
   `id` int(11) NOT NULL,
   `nome` varchar(255) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -1859,7 +1833,7 @@ CREATE TABLE `videos_comentarios` (
   `topico` int(11) NOT NULL,
   `data` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `ativo` int(1) NOT NULL DEFAULT '1'
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -1873,7 +1847,7 @@ CREATE TABLE `z_changelog` (
   `where` varchar(255) NOT NULL DEFAULT '',
   `date` int(11) NOT NULL DEFAULT '0',
   `description` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -1898,7 +1872,7 @@ CREATE TABLE `z_forum` (
   `edit_date` int(20) NOT NULL DEFAULT '0',
   `post_ip` varchar(15) NOT NULL DEFAULT '0.0.0.0',
   `icon_id` int(10) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -1919,7 +1893,7 @@ CREATE TABLE `z_helpdesk` (
   `uid` int(11) NOT NULL,
   `tag` int(11) NOT NULL,
   `registered` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -1931,7 +1905,7 @@ CREATE TABLE `z_network_box` (
   `id` int(11) NOT NULL,
   `network_name` varchar(10) NOT NULL,
   `network_link` varchar(50) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -1974,7 +1948,7 @@ CREATE TABLE `z_ots_comunication` (
   `param6` varchar(255) NOT NULL,
   `param7` varchar(255) NOT NULL,
   `delete_it` int(2) NOT NULL DEFAULT '1'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -1995,7 +1969,7 @@ CREATE TABLE `z_ots_guildcomunication` (
   `param6` varchar(255) NOT NULL,
   `param7` varchar(255) NOT NULL,
   `delete_it` int(2) NOT NULL DEFAULT '1'
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -2010,7 +1984,7 @@ CREATE TABLE `z_polls` (
   `start` int(11) NOT NULL,
   `answers` int(11) NOT NULL,
   `votes_all` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -2023,7 +1997,7 @@ CREATE TABLE `z_polls_answers` (
   `answer_id` int(11) NOT NULL,
   `answer` varchar(255) NOT NULL,
   `votes` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -2042,7 +2016,7 @@ CREATE TABLE `z_shopguild_history_item` (
   `trans_state` varchar(255) NOT NULL,
   `trans_start` int(11) NOT NULL DEFAULT '0',
   `trans_real` int(11) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -2061,7 +2035,7 @@ CREATE TABLE `z_shopguild_history_pacc` (
   `trans_state` varchar(255) NOT NULL,
   `trans_start` int(11) NOT NULL DEFAULT '0',
   `trans_real` int(11) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -2080,7 +2054,7 @@ CREATE TABLE `z_shopguild_offer` (
   `offer_description` text NOT NULL,
   `offer_name` varchar(255) NOT NULL,
   `pid` int(11) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 --
 -- Extraindo dados da tabela `z_shopguild_offer`
@@ -2114,7 +2088,7 @@ CREATE TABLE `z_shop_history_item` (
   `trans_state` varchar(255) NOT NULL,
   `trans_start` int(11) NOT NULL DEFAULT '0',
   `trans_real` int(11) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -2135,7 +2109,7 @@ CREATE TABLE `z_shop_offer` (
   `offer_category` int(11) NOT NULL,
   `offer_new` int(11) NOT NULL,
   `pid` int(11) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
 --
 -- Extraindo dados da tabela `z_shop_offer`
@@ -2853,7 +2827,3 @@ ALTER TABLE `store_history`
 --
 ALTER TABLE `tile_store`
   ADD CONSTRAINT `tile_store_ibfk_1` FOREIGN KEY (`house_id`) REFERENCES `houses` (`id`) ON DELETE CASCADE;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
