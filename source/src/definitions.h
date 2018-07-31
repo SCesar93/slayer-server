@@ -20,9 +20,9 @@
 #ifndef FS_DEFINITIONS_H_877452FEC245450C9F96B8FD268D8963
 #define FS_DEFINITIONS_H_877452FEC245450C9F96B8FD268D8963
 
-static constexpr auto STATUS_SERVER_NAME = "TFS modified by TFS and Qwizer";
-static constexpr auto STATUS_SERVER_VERSION = "1.3";
-static constexpr auto STATUS_SERVER_DEVELOPERS = "TFS and Qwizer";
+static constexpr auto STATUS_SERVER_NAME = "TFS modified by TFS, Qwizer and SCesar";
+static constexpr auto STATUS_SERVER_VERSION = "1.4";
+static constexpr auto STATUS_SERVER_DEVELOPERS = "TFS, Qwizer and SCesar";
 
 static constexpr auto CLIENT_VERSION_MIN = 1100;
 static constexpr auto CLIENT_VERSION_MAX = 1132;

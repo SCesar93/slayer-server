@@ -11,7 +11,7 @@ timeToDecreaseFrags = 24 * 60 * 60 * 1000
 whiteSkullTime = 10 * 60 * 1000
 stairJumpExhaustion = 2 * 1000
 experienceByKillingPlayers = true
-expFromPlayersLevelRange = 75
+expFromPlayersLevelRange = 60
 
 -- Connection Config
 -- NOTE: maxPlayers set to 0 means no limit
@@ -26,7 +26,7 @@ onePlayerOnlinePerAccount = true
 allowClones = false
 serverName = "Slayer-Server"
 statusTimeout = 5 * 1000
-replaceKickOnLogin = true
+replaceKickOnLogin = false
 maxPacketsPerSecond = 50
 enableLiveCasting = true
 liveCastPort = 7173
@@ -93,7 +93,7 @@ rateExp = 1
 rateSkill = 30
 rateLoot = 4
 rateMagic = 8
-rateSpawn = 1
+rateSpawn = 3
 
 -- Monsters
 deSpawnRange = 2
@@ -115,5 +115,5 @@ startupDatabaseOptimization = true
 -- Status server information
 ownerName = "SCesar"
 ownerEmail = "sceesar93@gmail.com"
-url = "http://www."
+url = "http://www.slayer-servegame.com"
 location = "Brazil"

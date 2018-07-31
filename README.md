@@ -21,11 +21,11 @@ Website<a href="https://github.com/Qwizer/gesior-accmaker">Click here</a>
 IpChanger versions 7.x - 10.x: <a href="https://static.otland.net/ipchanger.exe">Click here</a>
 
 # Generate tfs in ubuntu
-Install dependencies
-$ sudo apt-get install git cmake build-essential liblua5.2-dev libgmp3-dev libmysqlclient-dev libboost-system-dev libboost-iostreams-dev libpugixml-dev
-Enter in main dir and run
-$ mkdir build && cd build
-$ cmake ../source
+Install dependencies<br>
+$ sudo apt-get install git cmake build-essential liblua5.2-dev libgmp3-dev libmysqlclient-dev libboost-system-dev libboost-iostreams-dev libpugixml-dev<br><br>
+Enter in main dir and run<br>
+$ mkdir build && cd build<br>
+$ cmake ../source<br>
 $ make
 
 # Extract map
