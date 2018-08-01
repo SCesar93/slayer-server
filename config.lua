@@ -15,14 +15,14 @@ expFromPlayersLevelRange = 60
 
 -- Connection Config
 -- NOTE: maxPlayers set to 0 means no limit
-ip = "127.0.0.1"
+ip = "192.168.100.7"
 bindOnlyGlobalAddress = false
 loginProtocolPort = 7171
 gameProtocolPort = 7172
 statusProtocolPort = 7171
 maxPlayers = 2000
 motd = "Welcome To Slayer-Server! OpenServer - Prey System + Imbuiment System and More..."
-onePlayerOnlinePerAccount = true
+onePlayerOnlinePerAccount = false
 allowClones = false
 serverName = "Slayer-Server"
 statusTimeout = 5 * 1000
