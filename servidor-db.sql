@@ -1453,7 +1453,7 @@ CREATE TABLE `players` (
   `skull` tinyint(1) NOT NULL DEFAULT '0',
   `skulltime` int(11) NOT NULL DEFAULT '0',
   `lastlogout` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
-  `blessings` tinyint(2) NOT NULL DEFAULT '0',
+  `blessings` int(10) NOT NULL DEFAULT '0',
   `onlinetime` int(11) NOT NULL DEFAULT '0',
   `deletion` bigint(15) NOT NULL DEFAULT '0',
   `balance` bigint(20) UNSIGNED NOT NULL DEFAULT '0',

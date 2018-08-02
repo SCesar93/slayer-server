@@ -52,3 +52,11 @@ Need enter in folder /data/world and extract the ot serv map
 
 # GOD Account
 Password: 2/god
+
+
+# TODO:
+Adjust xp stages. <br>
+Adjust initials items (add more gold and reward by level). <br>
+Adjust mana/hp regen. <br>
+Adjust spells cds. <br>
+Create site.
